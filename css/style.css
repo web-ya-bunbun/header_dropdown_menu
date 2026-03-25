@@ -383,15 +383,17 @@ body {
   }
 }
 .gnavFunction:checked {
-  ~ .gnavSubList,
-  ~ .gnavSubSubList {
-      visibility: visible;
-      opacity: 1;
-      max-height: 200vh;
-  }
-  ~ .gnavCommand {
-    &::after {
-      opacity: 0;
+  @media (max-width: 767px) {
+    ~ .gnavSubList,
+    ~ .gnavSubSubList {
+        visibility: visible;
+        opacity: 1;
+        max-height: 200vh;
+    }
+    ~ .gnavCommand {
+      &::after {
+        opacity: 0;
+      }
     }
   }
 }
