@@ -1,11 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>多階層メニュー</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add,location_on,mail" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>JS不要！多階層メニュー</title>
 </head>
+
 <body>
-  
+  <header class="header">
+    <p class="logo">
+      <a href="">
+        <img src="https://placehold.jp/40/aaaaaa/ffffff/200x80.png?text=LOGO" alt="" />
+      </a>
+    </p>
+    <div class="menuCtrl">
+      <input type="checkbox" name="menuCtrlBtn" id="menuCtrlBtn" hidden />
+      <label for="menuCtrlBtn" class="menuCtrlBtn">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg viewBox="0 0 240 180">
+          <rect class="menuCtrlLine" y="0" width="240" height="30" rx="15" ry="15" />
+          <rect class="menuCtrlLine" y="75" width="240" height="30" rx="15" ry="15" />
+          <rect class="menuCtrlLine" y="75" width="240" height="30" rx="15" ry="15" />
+          <rect class="menuCtrlLine" y="150" width="240" height="30" rx="15" ry="15" />
+        </svg>
+      </label>
+    </div>
+    <nav class="gnav">
+      <ul class="gnavList">
+        <li class="gnavItem"><a href="#">Home</a></li>
+        <li class="gnavItem">
+          <a href="#">About</a>
+          <input type="checkbox" name="gnavAbout" id="gnavAbout" class="gnavFunction" hidden />
+          <label for="gnavAbout" class="gnavCommand"></label>
+          <ul class="gnavSubList">
+            <li class="gnavSubItem"><a href="#">About1</a></li>
+            <li class="gnavSubItem">
+              <a href="#">About2About2About2</a>
+              <input type="checkbox" name="gnavAbout2" id="gnavAbout2" class="gnavFunction" hidden />
+              <label for="gnavAbout2" class="gnavCommand"></label>
+              <ul class="gnavSubSubList">
+                <li class="gnavSubSubItem"><a href="">About2-1</a></li>
+                <li class="gnavSubSubItem"><a href="">About2-2</a></li>
+                <li class="gnavSubSubItem"><a href="">About2-3</a></li>
+              </ul>
+            </li>
+            <li class="gnavSubItem"><a href="#">About3</a></li>
+          </ul>
+        </li>
+        <li class="gnavItem"><a href="#">Product</a></li>
+        <li class="gnavItem"><a href="#">Topics</a></li>
+      </ul>
+    </nav>
+    <ul class="headerUtility">
+      <li class="headerUtilityItem headerUtilityLocation">
+        <a href="#">Location</a>
+      </li>
+      <li class="headerUtilityItem headerUtitityContact">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </header>
 </body>
+
 </html>
