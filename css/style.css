@@ -103,12 +103,15 @@ body {
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   border-bottom: 1px solid #aaa;
+  background-color: #fff;
 }
 
 .logo {
@@ -169,8 +172,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100dvh;
-    background-color: rgba(255, 255, 255, .7);
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .95);
     visibility: hidden;
     opacity: 0;
     transition: all .3s;
@@ -186,7 +189,11 @@ body {
   	position: absolute;
     place-self: center;
     inset: 0;
+    background-color: #fff;
     text-align: center;
+    max-height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
   @media screen and (min-width: 768px) {
     position: relative;
@@ -205,6 +212,7 @@ body {
   @media (max-width: 767px) {
     border-bottom: 1px solid #aaa;
     font-size: 1.5rem;
+    overflow-y: hidden;
     > a {
     	padding-block: 1rem ;
     }
